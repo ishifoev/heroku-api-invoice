@@ -8,7 +8,7 @@ curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
 $headers = array(
    "Accept: application/vnd.heroku+json; version=3",
-   "Authorization: Bearer 204bb74b-b82d-4b88-a63b-ea01c0890da2",
+   "Authorization: Bearer ",
 );
 curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
 //for debug only!
