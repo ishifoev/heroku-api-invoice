@@ -9,7 +9,7 @@ A PHP client for the Heroku Platform API working for Invoices, Account, Apps .et
 
 For example you need to get information for get invoice from API heroku you need to use this. 
 
-````
+````php
 use Ishifoev\HerokuApi\HerokuClient;
 
 $heroku = new HerokuClient([
