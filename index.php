@@ -5,7 +5,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 use Ishifoev\HerokuApi\HerokuClient;
 
 $heroku = new HerokuClient([
-   'apiKey' => '204bb74b-b82d-4b88-a63b-ea01c0890da2',
+   'apiKey' => 'YOUR_API_HERE',
 ]);
 
 $invoice = $heroku->get('account/invoices');
