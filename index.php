@@ -2,16 +2,10 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-use Ishifoev\HerokuApi\HerokuClient;
+use Ishifoev\HerokuApi\HerokuGenerateJson;
 
-$heroku = new HerokuClient([
-   'apiKey' => 'YOUR_API_HERE',
-]);
+$json = new HerokuGenerateJson;
+$json->generateApiJson();
 
-$invoice = $heroku->get('account/invoices');
-echo '<pre>';
-var_export($invoice);
-echo '</pre>';
-file_put_contents("invoice.json", json_encode($invoice, JSON_PRETTY_PRINT));
 ?>
 
