@@ -3,8 +3,8 @@
 namespace Ishifoev\HerokuApi;
 
 use GuzzleHttp\Psr7\Request;
-use Ishifoev\HerokuApi\Exception\BadHttpStatusException;
-use Ishifoev\HerokuApi\Exception\JsonDecodingException;
+use Ishifoev\HerokuApi\BadHttpStatusException;
+use Ishifoev\HerokuApi\JsonDecodingException;
 use Ishifoev\HerokuApi\JsonEncodingException;
 use Ishifoev\HerokuApi\MissingApiKeyException;
 use Http\Client\Curl\Client as CurlHttpClient;
