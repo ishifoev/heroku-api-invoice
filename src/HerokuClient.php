@@ -107,13 +107,7 @@ class HerokuClient {
         $apiResponse = json_decode($httpResponse->getBody()->getContents());
         $httpResponse->getBody()->rewind(); // Rewind the stream to make future access easier.
 
-        if ($httpResponse->getStatusCode() >= 400) {
-            throw new BadHttpStatusException(sprintf(
-                'Heroku API error: HTTP code %s [%s] %s',
-                $httpResponse->getStatusCode(),
-                empty($apiResponse->id) ? 'no error ID found' : $apiResponse->id,
-                empty($apiResponse->message) ? 'no error message found' : $apiResponse->message
-            ));
+        if ($httpResponse instanceof BadHttpStatusException && $httpResponse->getStatusCode() >= 400) {
         }
 
         // Check for JSON decoding errors.
